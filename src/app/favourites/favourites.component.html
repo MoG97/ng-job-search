@@ -1,0 +1,7 @@
+<body>
+  <div *ngIf="favourites$ | async as jobs">
+    <ng-container *ngFor="let job of jobs" >
+      <app-job-card [job]="job" [hideFavouriteIcon]="true"></app-job-card>
+    </ng-container>
+  </div>
+</body>

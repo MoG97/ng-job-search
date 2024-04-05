@@ -1,0 +1,8 @@
+<body>
+  <div *ngIf="jobs$ | async as jobs">
+    <ng-container *ngFor="let job of jobs" >
+      <app-job-card [job]="job"></app-job-card>
+    </ng-container>
+  </div>
+</body>
+
