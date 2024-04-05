@@ -2,11 +2,11 @@
   cursor: pointer;
 }
 
-.active {
+.favourited {
   background-color: black;
 }
 
 .background {
-  background-color: yellow;
+  background-color: gold;
   border-radius: 9999px;
 }
