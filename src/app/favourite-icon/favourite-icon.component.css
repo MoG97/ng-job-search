@@ -1,0 +1,12 @@
+.clickable {
+  cursor: pointer;
+}
+
+.active {
+  background-color: black;
+}
+
+.background {
+  background-color: yellow;
+  border-radius: 9999px;
+}

@@ -1,0 +1,23 @@
+<body>
+  <div class="back" routerLink="/jobs">
+    Back
+  </div>
+  <div *ngIf="job$ | async as job" class="details">
+    <div class="details-header">
+      <img src={{job.companyLogo}} class="logo">
+      <div class="heading-text">
+        <p><strong>Company:</strong> {{ job.companyName }}</p>
+        <p><strong>Role:</strong> {{ job.title }}</p>
+        <p><strong>Location:</strong> {{ job.location }}</p>
+        <li *ngFor="let industry of job.industries" class="industries">
+          <p class="tag" [innerHTML]="formatHtml(industry)"></p>
+        </li>
+        <li *ngFor="let type of job.types" class="industries">
+          <p class="tag" >{{type | uppercase }}</p>
+        </li>
+      </div>
+    </div>
+    <p><strong>Publish Date:</strong> {{ job.publishDate | date: 'dd MMMM yyyy' }}</p>
+    <div [innerHTML]="job.description"></div>
+  </div>
+</body>

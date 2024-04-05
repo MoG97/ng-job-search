@@ -1,0 +1,11 @@
+<div class="job">
+  <div class="summary">
+    <img [src]="job?.companyLogo" class="logo">
+    <div>
+      <p>{{ job?.companyName }}</p>
+      <a class="nav-details" [routerLink]="['/job-details', job?.id]">{{ job?.title }}</a>
+      <p class="reference">Ref: {{ job?.reference }}</p>
+    </div>
+  </div>
+  <app-favourite-icon [id]="job?.id" *ngIf="!hideFavouriteIcon"></app-favourite-icon>
+</div>
